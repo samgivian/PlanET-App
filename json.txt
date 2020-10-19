@@ -1,0 +1,68 @@
+ // "name": "reactdiamondchallange",
+ // "displayName": "home",
+
+  
+ /// "expo": {
+ //   "name": "reactdiamondchallange",
+ //   "slug": "expo-template-bare",
+ //   "privacy": "unlisted",
+ //   "sdkVersion": "35.0.0",
+ //   "version": "1.0.0",
+ ///   "entryPoint": "node_modules/expo/AppEntry.js",
+ ///   "platforms": [
+/////      "ios",
+//      "android",
+  //    "web"
+ ///   ]
+//  }*/
+
+
+  <View>
+                <CalendarList
+                    current={'2019-10-15'}
+                    pastScrollRange={24}
+                    futureScrollRange={24}
+                    horizontal
+                    pagingEnabled
+                    style={{ borderBottomWidth: 1, borderBottomColor: 'black' }}
+                    markedDates={{
+                        '2019-10-23': { selected: true, marked: true },
+                        '2019-10-24': { selected: true, marked: true, dotColor: 'green' },
+                        '2019-11-25': { marked: true, dotColor: 'red' },
+                        '2019-11-26': { marked: true },
+                        '2019-10-27': { disabled: true, activeOpacity: 0 }
+                    }}
+                    disabledByDefault={true}
+                    hideArrows={true}
+                />
+            </View>
+
+
+
+               fire.database().ref('users/samgivian2015/coins').on('value', function (snapshot) {
+      alert(snapshot.val());
+    })
+
+
+      <Item floatingLabel>
+            <Label>Email</Label>
+            <Input
+              autoCorrect={false}
+              autoCapitalize="none"
+              onChangeText={(email) => this.setState({ email })}
+            />
+
+          </Item>
+
+
+          <Hoshi
+            label={'Email'}
+            // this is used as active border color
+            borderColor={'blue'}
+            // active border height
+            borderHeight={3}
+            inputPadding={16}
+            onChangeText={(email) => this.setState({ email })}
+            // this is used to set backgroundColor of label mask.
+            // please pass the backgroundColor of your TextInput container.
+         
